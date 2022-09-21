@@ -1,11 +1,11 @@
 ﻿using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure
+namespace Infrastructure.Data
 {
     public class NameContext : DbContext
     {
-        public NameContext(DbContextOptions<NameContext> options) :base(options)
+        public NameContext(DbContextOptions<NameContext> options) : base(options)
         {
 
         }
@@ -20,7 +20,7 @@ namespace Infrastructure
             base.OnModelCreating(modelBuilder);
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Student>? Students { get; set; }
 
     }
 }
